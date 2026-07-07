@@ -9,6 +9,23 @@ Prowadzisz osobę (często nietechniczną, np. projektanta/UX-owca) przez cały 
 
 Fundamentalna zasada tego skilla: **każdy krok odwołuje się do pliku, nie do pamięci rozmowy**. SPEC.md i PLAN.md to jedyne źródła prawdy. Jeśli w trakcie implementacji coś nie zgadza się ze SPEC.md — zatrzymujesz się i pytasz, nie "poprawiasz po cichu".
 
+## Etap wstępny (-1) — zanim zaczniesz cokolwiek pytać: sprawdź czy potrafisz zapisywać pliki
+
+To jest twardy warunek wejścia, sprawdzany **zawsze na starcie**, przed Etapem 0. Bez tego cały workflow się rozjeżdża: użytkownik odpowiada na pytania, Ty "tworzysz" SPEC.md, ale w Claude Desktop bez odpowiedniego MCP-a to, co pokazujesz, jest tylko podglądem (artifact) w oknie rozmowy — nic nie ląduje na dysku, dopóki użytkownik ręcznie tego nie wyeksportuje. To myli i marnuje czas.
+
+Sprawdź, w czym pracujesz:
+
+- **Claude Code** — ma natywny zapis do plików, nic więcej nie potrzeba. Pomiń ten etap, przejdź do Etapu 0.
+- **Claude Desktop** — zapis do plików wymaga podłączonego MCP z dostępem do systemu plików (rekomendowany: **Desktop Commander**). Bez niego nie przechodzisz dalej.
+
+Jeśli działasz w Claude Desktop, zapytaj wprost: **"Czy masz już podłączony jakiś MCP z dostępem do plików (np. Desktop Commander)?"**
+
+- Jeśli tak — zrób krótki test zapisu (np. utwórz pusty plik testowy w katalogu roboczym i potwierdź że istnieje), zanim przejdziesz do Etapu 0.
+- Jeśli nie — przeprowadź instalację wg `references/instalacja-mcp.md`, sekcja "Desktop Commander". Najprostsza ścieżka: w Claude Desktop kliknij "+" → Connectors → Browse Connectors → wyszukaj "Desktop Commander" → zainstaluj jednym kliknięciem → zrestartuj aplikację.
+- Po instalacji zrób test zapisu (patrz wyżej) — dopiero po jego potwierdzeniu przechodzisz do Etapu 0.
+
+Nie zaczynaj zbierać odpowiedzi do SPEC.md, dopóki ten warunek nie jest spełniony — inaczej cała praca z Etapu 0-1 zniknie razem z oknem czatu.
+
 ## Jak rozmawiać z użytkownikiem
 
 - Jedno pytanie na raz. Nie zarzucaj listą 10 pytań naraz.
@@ -105,4 +122,4 @@ To jest ostatni krok, często pomijany — i najważniejszy dla tego, żeby proj
 - `assets/spec-template.md` — szkielet SPEC.md do wypełnienia w Etapach 0-1.
 - `assets/plan-template.md` — szkielet PLAN.md do Etapu 2.
 - `assets/readme-klient-template.md` — szkielet dokumentu dla klienta, Etap 7.
-- `references/instalacja-mcp.md` — jak podłączyć Notion MCP i filesystem MCP w Claude Desktop/Code, do użycia w Etapie 4.
+- `references/instalacja-mcp.md` — jak podłączyć Desktop Commander (zapis plików w Claude Desktop), Notion MCP i filesystem MCP w Claude Desktop/Code, do użycia w Etapie wstępnym i Etapie 4.

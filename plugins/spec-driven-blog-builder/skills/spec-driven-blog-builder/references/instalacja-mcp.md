@@ -1,6 +1,31 @@
 # Instalacja MCP dla wybranego wariantu CMS
 
-Ten plik czytaj w Etapie 4 skilla (podłączenie MCP jako CMS), przed napisaniem kodu integracji. Instrukcje różnią się dla Claude Desktop i Claude Code — sprawdź w czym pracuje użytkownik.
+Ten plik czytaj w Etapie wstępnym (zapis plików) i w Etapie 4 skilla (podłączenie MCP jako CMS), przed napisaniem kodu integracji. Instrukcje różnią się dla Claude Desktop i Claude Code — sprawdź w czym pracuje użytkownik.
+
+## Desktop Commander (wymagany do zapisu plików w Claude Desktop)
+
+Bez tego MCP-a Claude Desktop nie zapisuje plików na dysku — pokazuje tylko podgląd (artifact) w oknie rozmowy, który trzeba ręcznie eksportować. Claude Code tego nie potrzebuje (ma natywny zapis).
+
+### Claude Desktop — najprostsza ścieżka (one-click)
+1. W oknie czatu kliknij "+" → **Connectors** → **Browse Connectors**.
+2. Wyszukaj "Desktop Commander".
+3. Zainstaluj jednym kliknięciem.
+4. Zrestartuj Claude Desktop.
+
+### Claude Desktop — ścieżka alternatywna (terminal)
+```
+npx @wonderwhy-er/desktop-commander@latest setup
+```
+Ten komenda sama zapisuje wpis do configu Claude Desktop (macOS: `~/Library/Application Support/Claude/claude_desktop_config.json`, Windows: `%APPDATA%\Claude\claude_desktop_config.json`, Linux: `~/.config/Claude/claude_desktop_config.json`) — nie trzeba edytować pliku ręcznie. Zrestartuj aplikację po zakończeniu.
+
+### Claude Code
+Zwykle niepotrzebne — Code ma natywne narzędzia do zapisu plików (Write/Edit) i nie wymaga Desktop Commandera do tego celu. Warto go dodać tylko jeśli potrzebujesz dodatkowych możliwości, których Code nie ma natywnie (długo działające procesy interaktywne, odczyt PDF/Excel przez `read_file`):
+```
+claude mcp add --scope user desktop-commander -- npx -y @wonderwhy-er/desktop-commander@latest
+```
+
+### Test po instalacji
+Poproś Claude o utworzenie pustego pliku testowego w katalogu roboczym (np. `test.md`) i potwierdzenie że plik faktycznie istnieje na dysku (nie tylko w podglądzie rozmowy). Dopiero po pozytywnym teście przechodź do dalszych etapów.
 
 ## Wariant: Notion MCP
 
