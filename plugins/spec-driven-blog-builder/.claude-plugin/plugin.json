@@ -1,0 +1,7 @@
+{
+  "name": "spec-driven-blog-builder",
+  "version": "1.0.0",
+  "description": "Prowadzi całą budowę bloga dla klienta od zera do wdrożenia metodą spec-driven (specyfikacja → plan → implementacja fazami → CMS przez MCP → QA → deploy → instrukcja dla klienta), zamiast vibe codingu.",
+  "author": { "name": "Eryk Orłowski" },
+  "skills": ["./skills/spec-driven-blog-builder"]
+}
