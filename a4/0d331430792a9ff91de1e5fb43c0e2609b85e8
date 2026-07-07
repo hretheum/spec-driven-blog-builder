@@ -1,0 +1,19 @@
+plugins/spec-driven-blog-builder/skills/spec-driven-blog-builder/references/instalacja-mcp.md
+  s_4841093a537760::t_e892612850a2ba 3-28
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "a40d331430792a9ff91de1e5fb43c0e2609b85e8",
+  "prompts": {},
+  "sessions": {
+    "s_4841093a537760": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "016b225e-b9fb-4aab-9ba0-a1b6e4d183f5",
+        "model": "unknown"
+      },
+      "human_author": "Eryk Orłowski <eryk@talentcanvas.tech>"
+    }
+  }
+}
