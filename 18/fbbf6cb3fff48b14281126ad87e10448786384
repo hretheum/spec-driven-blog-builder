@@ -1,0 +1,23 @@
+plugins/spec-driven-blog-builder/.claude-plugin/plugin.json
+  s_4841093a537760::t_bfdf21c303acbc 1-7
+.claude-plugin/marketplace.json
+  s_4841093a537760::t_0817a92a1810e3 1-12
+README.md
+  s_4841093a537760::t_c06e4b08cac53c 7,9,11-22,27,35-52
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "18fbbf6cb3fff48b14281126ad87e10448786384",
+  "prompts": {},
+  "sessions": {
+    "s_4841093a537760": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "016b225e-b9fb-4aab-9ba0-a1b6e4d183f5",
+        "model": "claude-opus-4-8"
+      },
+      "human_author": "Eryk Orłowski <eryk@talentcanvas.tech>"
+    }
+  }
+}
